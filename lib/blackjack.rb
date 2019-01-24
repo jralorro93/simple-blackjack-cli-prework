@@ -24,7 +24,11 @@ end
 
 def initial_round
   card_total = deal_card + deal_card
+<<<<<<< HEAD
   display_card_total(card_total)
+=======
+  print display_card_total(card_total)
+>>>>>>> d6683824d283d3a89192a7cd35a141273ecc23b9
   return card_total
 end
 
@@ -34,6 +38,10 @@ def hit?(card_total)
   if answer == "s"
     card_total
   elsif answer == "h"
+<<<<<<< HEAD
+=======
+    display_card_total(card_total)
+>>>>>>> d6683824d283d3a89192a7cd35a141273ecc23b9
     card_total = card_total + deal_card
   else
     invalid_command
@@ -50,11 +58,19 @@ end
 #####################################################
 
 def runner
+<<<<<<< HEAD
   welcome
   card_total = initial_round
   until card_total > 21
     card_total = hit?(card_total)
     display_card_total(card_total)
+=======
+  card_total = initial_round
+  welcome
+  initial_round
+  until card_total > 21
+    card_total = hit?(card_total)
+>>>>>>> d6683824d283d3a89192a7cd35a141273ecc23b9
   end 
   end_game(card_total)
 end
